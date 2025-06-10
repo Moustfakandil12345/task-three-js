@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my-task</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Righteous&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <section id="section-one">
+    <div class="container-fluid text-center">
+      <header id="header-section">
+        <div class="header">
+          <h1> Bookmarker </h1>
+        </div>
+      </header>
+      <hr class="always">
+      <!-- <div class="dotted"></div> -->
+      <div class="content-body">
+        <h2>
+          <i class="fa-solid fa-bookmark first-icon"></i>
+          Bookmark your favor<span>ite sites</span>
+          <i class="fa-solid fa-bookmark second-icon"></i>
+        </h2>
+        <div class="first-input">
+          <label for="siteName" class="form-label">
+            <i class="fa-solid fa-book-bookmark"></i> Site Name
+          </label>
+          <input oninput="validationName()" type="text" class="form-control" id="siteName" placeholder="Bookmark Name">
+          <p id="msgAlert" class="alert alert-danger d-none"> It must be from 3 to 30 charachter both capital or small.
+          </p>
+        </div>
+        <div class="second-input">
+          <label for="siteName" class="form-label">
+            <i class="fa-solid fa-link"></i> Site URL
+          </label>
+          <input oninput="validationURL()" type="url" class="form-control" id="siteURL" placeholder="Website URL">
+          <p id="msgAlert2" class="alert alert-danger d-none"> It must start with http or https then :// after that www. finally add any name of application.com</p>
+        </div>
+        <button onclick="addData()" class="btn btn-danger"> Submit </button>
+      </div>
+      <hr class="always none">
+      <table class="table">
+        <thead>
+          <tr class="first-tr">
+            <th> Index </th>
+            <th> Website Name </th>
+            <th> Visit </th>
+            <th> Delete </th>
+          </tr>
+        </thead>
+        <tbody id="bodyData">
+          <tr class="second-tr">
+            <th> 1 </th>
+            <th> Facebook </th>
+            <th> <a href="" class="btn btn-success"> <i class="fa-solid fa-eye"></i> Visit </a></th>
+            <th> <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i> Delete</button> </th>
+          </tr>
+        </tbody>
+      </table>
+      <div class="content d-none" id="contentData">
+         <div class="main-content">
+          <div class="circles">
+            <span class="first"><i class="fa-solid fa-circle"></i></span>
+            <span class="second"><i class="fa-solid fa-circle"></i></span>
+            <span class="third"><i class="fa-solid fa-circle"></i></span>
+          </div>
+          <div class="close-page">
+            <a href=""><i class="fa-solid fa-xmark"></i></a>
+          </div>
+        </div>
+        <h2> Site Name or Url is not valid, Please follow the rules below : </h2>
+        <h3> <span><i class="fa-regular fa-circle-right"></i></span> Site name must contain at least 3 characters
+        </h3>
+        <h3> <span><i class="fa-regular fa-circle-right"></i></span> Site URL must be a valid one </h3> 
+      </div>
+    </div>
+  </section>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
